@@ -1,0 +1,19 @@
+<br>
+<div class="col-md-12 text-center">
+  <button type="button" class="btn btn-success" (click)="filePicker.click()">Upload Image</button>
+  <input type="file" name ="image" class="file" #filePicker (change) = "onImagePicker($event)">
+  </div>
+
+<div class="container">
+		<div class="row">
+            <div class="col-lg-4 col-md-4 col-xs-6 thumb" *ngFor="let item of fileData">
+                <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                   [data-image]="item.image"
+                   data-target="#image-gallery">
+                    <img class="img-thumbnail"
+                         [src]="item.image"
+                         alt="Image Not Found">
+                </a>
+            </div>
+    </div>
+</div>
